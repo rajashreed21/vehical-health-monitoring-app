@@ -3,8 +3,8 @@ package com.example.vehicalhealthmonitoringsys
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
-object RetrofitClient {
-    private const val BASE_URL = "https://vehicalhealthmonitoring.onrender.com"
+object  RetrofitClient {
+    private const val BASE_URL = "https://vehical-health-monitoring-app.onrender.com"
     private val retrofit: Retrofit = Retrofit.Builder()
         .baseUrl(BASE_URL)
         .addConverterFactory(GsonConverterFactory.create())

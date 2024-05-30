@@ -10,6 +10,6 @@ interface ApiService {
     @POST("/Register")
     fun registerVehicle(@Body vehicle: Vehicle): Call<Void>
 
-    @GET("/status")
+    @GET("/statuss/{vehicalnumber}")
     fun getVehicleStatus(@Query("vehiclenumber") vehiclenumber: String): Call<VehicleStatus>
 }

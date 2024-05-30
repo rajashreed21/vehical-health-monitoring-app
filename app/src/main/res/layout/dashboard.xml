@@ -88,14 +88,14 @@
                 <ImageView
                     android:layout_width="80dp"
                     android:layout_height="80dp"
-                    android:id="@+id/cars"
+                    android:id="@+id/carimage"
                     app:srcCompat="@drawable/car"
                     android:layout_gravity="center"/>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="My Cars"
+                    android:text="My Car"
                     android:layout_gravity="center_horizontal"
                     android:textSize="18sp"
                     android:textStyle="bold"
@@ -123,14 +123,14 @@
                 <ImageView
                     android:layout_width="80dp"
                     android:layout_height="80dp"
-                    android:id="@+id/settings"
-                    app:srcCompat="@drawable/settings"
+                    android:id="@+id/statusimage"
+                    app:srcCompat="@drawable/status_24"
                     android:layout_gravity="center"/>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Settings"
+                    android:text="Status"
                     android:layout_gravity="center_horizontal"
                     android:textSize="18sp"
                     android:textStyle="bold"

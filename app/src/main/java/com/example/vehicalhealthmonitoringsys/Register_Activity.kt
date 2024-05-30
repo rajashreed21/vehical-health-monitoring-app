@@ -37,8 +37,8 @@ class Register_Activity : AppCompatActivity() {
             call.enqueue(object : Callback<Void> {
                 override fun onResponse(call: Call<Void>, response: Response<Void>) {
                     if (response.isSuccessful) {
-                        val intent = Intent(this@Register_Activity, Status_Activity::class.java)
-                        intent.putExtra("vehiclenumber", vehicle.vehiclenumber)
+                        val intent = Intent(this@Register_Activity, Dashboard_Activity::class.java)
+
                         startActivity(intent)
                     } else {
                         Toast.makeText(this@Register_Activity, "Registration failed", Toast.LENGTH_SHORT).show()

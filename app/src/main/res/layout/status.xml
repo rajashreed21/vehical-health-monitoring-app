@@ -6,79 +6,112 @@
     android:layout_height="match_parent"
     android:background="@drawable/img"
     android:padding="16dp"
-    tools:context=".Dashboard_Activity">
+    tools:context=".Status_Activity">
 
     <TextView
-        android:layout_width="990dp"
-        android:layout_height="90dp"
-        android:text="Vehical Health Monitoring"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Vehicle Health Status"
         android:textSize="30dp"
         android:textStyle="bold"
         android:gravity="center"
-        android:textColor="#80D8FF"/>
+        android:textColor="#80D8FF"
+        android:layout_marginBottom="20dp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:hint="Vehicle Number"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:textSize="20sp"
+        android:padding="16dp"
+        android:id="@+id/searchvehical"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/searchvehical"
+        android:layout_marginTop="20dp"
+        android:text="Search"
+        android:id="@+id/search_btn"/>
 
     <LinearLayout
-        android:layout_width="990dp"
-        android:layout_height="990dp"
-        android:gravity="center"
-        android:orientation="vertical">
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:layout_below="@id/search_btn">
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:hint="Vehicle Number"
-            android:textColor="@color/white"
-            android:textColorHint="@color/white"
+            android:text="Vehicle Number"
             android:textSize="20sp"
-            android:padding="16dp"
-            android:id="@+id/vehicleno1"/>
+            android:textColor="@color/white"
+            android:padding="8dp"/>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:hint="Engine"
+            android:id="@+id/vehicleview"
+            android:textSize="18sp"
             android:textColor="@color/white"
-            android:textColorHint="#FAF9F9"
-            android:textSize="20sp"
-            android:padding="16dp"
-            android:id="@+id/engine"/>
+            android:padding="8dp"/>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:hint="Brake"
-            android:textColor="@color/white"
-            android:textColorHint="@color/white"
+            android:text="Health Status"
             android:textSize="20sp"
-            android:padding="16dp"
-            android:id="@+id/brake"/>
+            android:textColor="@color/white"
+            android:padding="8dp"/>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:hint="Health Status"
+            android:id="@+id/statusview"
+            android:textSize="18sp"
             android:textColor="@color/white"
-            android:textColorHint="@color/white"
-            android:textSize="20sp"
-            android:padding="16dp"
-            android:id="@+id/healthstatus"/>
+            android:padding="8dp"/>
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Engine"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:padding="8dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/engine"
+            android:textSize="18sp"
+            android:textColor="@color/white"
+            android:padding="8dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Brake"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:padding="8dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/brake"
+            android:textSize="18sp"
+            android:textColor="@color/white"
+            android:padding="8dp"/>
         <Button
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Home"
-            android:backgroundTint="@color/white"
-            android:textColor="#3B84F1"
-            android:padding="18dp"
-            android:layout_marginTop="36dp"
-            android:textSize="20sp"
-            android:id="@+id/home_btn"/>
-
-
+            android:id="@+id/home_btn"
+            android:gravity="center"/>
     </LinearLayout>
-
 </RelativeLayout>

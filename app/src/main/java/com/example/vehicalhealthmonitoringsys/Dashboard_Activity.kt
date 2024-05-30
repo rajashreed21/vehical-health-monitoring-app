@@ -14,15 +14,21 @@ class Dashboard_Activity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.dashboard)
 
-        val ImageView = findViewById<ImageView>(R.id.register)
+        val regview = findViewById<ImageView>(R.id.register)
+        val statusview = findViewById<ImageView>(R.id.statusimage)
 
-        ImageView.setOnClickListener {
+        regview.setOnClickListener {
 
-                val intent = Intent(this, Register_Activity::class.java)
-                startActivity(intent)
-                finish()
-            }
+            val intent = Intent(this, Register_Activity::class.java)
+            startActivity(intent)
+        }
+        statusview.setOnClickListener {
+
+            val intent = Intent(this, Status_Activity::class.java)
+            startActivity(intent)
+
         }
     }
+}
 
 
