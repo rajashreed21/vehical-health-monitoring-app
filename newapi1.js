@@ -11,7 +11,7 @@ app.use(bodyParser.urlencoded({extended: true}))
 
 
 // TODO ENDPOINTS
-app.post('/Register', async(req, res) => {
+app.post('/register', async(req, res) => {
     
     try{
         const  {holdername,vehiclenumber,chassisnumber,insurancenumber,licensenumber}= req.body;
@@ -25,18 +25,18 @@ app.post('/Register', async(req, res) => {
     
 });
 
-app.get('/Registers/:vehicalnumber', async(req, res) => {
+app.get('/Register/:vehiclenumber', async(req, res) => {
     
     try{
         const vehicle = await registerdetails.find( {});
         if (!vehicle){
-            res.status(404).send('Vehical not found');
+            res.status(404).send('Vehicle not found');
         }else{
             res.status(200).json(vehicle);
         }
     }catch(err){
         console.error(err)
-        res.status(500).send('Error getting vehical details')
+        res.status(500).send('Error getting vehicle details')
     }
     
 });
@@ -55,7 +55,7 @@ app.post('/status',async (req, res) => {
         
 });
 
-app.get('/statuss/:vehicalnumber',async (req, res) => {
+app.get('/Status/:vehiclenumber',async (req, res) => {
     try{
         
         const status=await trackStatus.find({});
@@ -66,7 +66,7 @@ app.get('/statuss/:vehicalnumber',async (req, res) => {
         }
     }catch(err){
         console.error(err);
-        res.status(500).send ('Error getting vehical status');
+        res.status(500).send ('Error getting vehicle status');
     }
 });
 
