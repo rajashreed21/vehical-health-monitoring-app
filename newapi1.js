@@ -44,8 +44,8 @@ app.get('/Register/:vehiclenumber', async(req, res) => {
 
 app.post('/status',async (req, res) => {
     try{
-        const  {vehiclenumber,engine,brake,healthstatus}= req.body;
-        const status = new trackStatus({vehiclenumber,engine,brake,healthstatus});
+        const  {engine,brake,healthstatus}= req.body;
+        const status = new trackStatus({engine,brake,healthstatus});
         await status.save();
         res.status(201).send('Vehical status saved sucessfully');
     }catch(err){
