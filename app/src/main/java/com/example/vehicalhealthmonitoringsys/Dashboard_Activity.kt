@@ -1,9 +1,6 @@
 package com.example.vehicalhealthmonitoringsys
 
 import android.os.Bundle
-import android.widget.Button
-import android.widget.EditText
-import android.widget.Toast
 import android.content.Intent
 import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
@@ -16,6 +13,7 @@ class Dashboard_Activity : AppCompatActivity() {
 
         val regview = findViewById<ImageView>(R.id.register)
         val statusview = findViewById<ImageView>(R.id.statusimage)
+        val carview = findViewById<ImageView>(R.id.carimage)
 
         regview.setOnClickListener {
 
@@ -27,6 +25,12 @@ class Dashboard_Activity : AppCompatActivity() {
             val intent = Intent(this, Status_Activity::class.java)
             startActivity(intent)
 
+        }
+        carview.setOnClickListener {
+
+            val intent = Intent(this, Vehicledetails_Activity::class.java)
+            startActivity(intent)
+            finish()
         }
     }
 }

@@ -18,7 +18,7 @@
         android:layout_height="wrap_content"
         android:text="Dashboard"
         android:textColor="#00E5FF"
-        android:textSize="36sp"
+        android:textSize="32sp"
         android:textStyle="bold"
         android:layout_marginLeft="30dp"
         android:layout_marginTop="30dp"/>
@@ -95,7 +95,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="My Car"
+                    android:text="My Vehicle"
                     android:layout_gravity="center_horizontal"
                     android:textSize="18sp"
                     android:textStyle="bold"

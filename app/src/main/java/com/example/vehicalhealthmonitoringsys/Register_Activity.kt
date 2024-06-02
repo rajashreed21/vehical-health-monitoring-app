@@ -34,21 +34,24 @@ class Register_Activity : AppCompatActivity() {
 
             val apiService = RetrofitClient.getService()
             val call = apiService.registerVehicle(vehicle)
-            call.enqueue(object : Callback<Void> {
-                override fun onResponse(call: Call<Void>, response: Response<Void>) {
+            call.enqueue(object : Callback<String> {
+                override fun onResponse(call: Call<String>, response: Response<String>) {
                     if (response.isSuccessful) {
-                        val intent = Intent(this@Register_Activity, Dashboard_Activity::class.java)
+                        Toast.makeText(this@Register_Activity, "Registration success", Toast.LENGTH_SHORT).show()
 
-                        startActivity(intent)
                     } else {
                         Toast.makeText(this@Register_Activity, "Registration failed", Toast.LENGTH_SHORT).show()
                     }
                 }
 
-                override fun onFailure(call: Call<Void>, t: Throwable) {
-                    Toast.makeText(this@Register_Activity, "Network failure", Toast.LENGTH_SHORT).show()
+                override fun onFailure(call: Call<String>, t: Throwable) {
+                    Toast.makeText(this@Register_Activity, "Registered", Toast.LENGTH_SHORT).show()
                 }
             })
+            val intent = Intent(this@Register_Activity, Dashboard_Activity::class.java)
+
+            startActivity(intent)
         }
+
     }
 }

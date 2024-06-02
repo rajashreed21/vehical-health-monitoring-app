@@ -4,12 +4,16 @@ import retrofit2.Call
 import retrofit2.http.Body
 import retrofit2.http.GET
 import retrofit2.http.POST
-import retrofit2.http.Query
+import retrofit2.http.Path
 
 interface ApiService {
-    @POST("/Register")
-    fun registerVehicle(@Body vehicle: Vehicle): Call<Void>
+    @POST("/register")
+    fun registerVehicle(@Body vehicle: Vehicle): Call<String>
 
-    @GET("/statuss/{vehicalnumber}")
-    fun getVehicleStatus(@Query("vehiclenumber") vehiclenumber: String): Call<VehicleStatus>
+    @GET("Register/{vehiclenumber}")
+    fun getVehicleDetails(@Path("vehiclenumber") vehiclenumber: String): Call<List<Vehicle>>
+
+
+    @GET("/Status/{vehiclenumber}")
+    fun getVehicleStatus(@Path("vehiclenumber") vehiclenumber: String): Call<List<VehicleStatus>>
 }
